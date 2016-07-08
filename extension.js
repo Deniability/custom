@@ -1,13 +1,13 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "basicBot";
+    var fork = "Deniability";
 
     // Define our function responsible for extending the bot.
     function extend() {
         // If the bot hasn't been loaded properly, try again in 1 second(s).
         if (!window.bot) {
-          return setTimeout(extend, 1 * 1000);
+          return setTimeout(extend, 5 * 1000);
         }
 
         // Precaution to make sure it is assigned properly.
@@ -46,7 +46,7 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-      botName: "basicBot",
+      botName: "MooBot",
       language: "english",
       chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
       scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
@@ -59,19 +59,19 @@
       smartSkip: true,
       cmdDeletion: true,
       maximumAfk: 120,
-      afkRemoval: true,
+      afkRemoval: false,
       maximumDc: 60,
       bouncerPlus: true,
-      blacklistEnabled: true,
+      blacklistEnabled: false,
       lockdownEnabled: false,
       lockGuard: false,
       maximumLocktime: 10,
-      cycleGuard: true,
+      cycleGuard: false,
       maximumCycletime: 10,
-      voteSkip: false,
+      voteSkip: true,
       voteSkipLimit: 10,
       historySkip: false,
-      timeGuard: true,
+      timeGuard: false,
       maximumSongLength: 10,
       autodisable: true,
       commandCooldown: 30,
